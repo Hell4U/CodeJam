@@ -1,14 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-void conl(string& s){
-    for(char& c:s){
-        if(c=='1')c='0';
-        else if(c=='0')c='1';
-    }
-}
-
 int main() {
     int t,n;
     cin>>t>>n;
@@ -25,7 +17,13 @@ int main() {
                     cout << c+1 << endl;
                     cin >> q;
                     if(s[c]!=q)
-                        conl(s);
+                      for(char& c:s)
+                      {
+                            if(c=='1')
+                                c='0';
+                            else if(c=='0')
+                                c='1';
+                      }
                 }
                 else
                 {
